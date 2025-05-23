@@ -1,0 +1,67 @@
+<!-- Statement Variant A -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Cormorant:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  .statement-a {
+    --red:    #e34a56;
+    --blue:   #9bb9ed;
+    --purple: #4b168a;
+    --text:   #2B2B2B;
+    --bg:     #FFFFFF;
+
+    position: relative;
+    background: var(--bg);
+    padding: 2rem 1.5rem 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    font-family: 'Montserrat', sans-serif;
+    max-width: 480px;
+    margin: 1.5rem auto;
+    overflow: hidden;
+  }
+  /* vertical accent bar */
+  .statement-a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--purple), var(--blue));
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .statement-a .heading {
+    color: var(--purple);
+    font-family: 'Cormorant', serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+  .statement-a blockquote {
+    margin: 0 0 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--blue);
+    font-family: 'Cormorant', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .statement-a p {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+</style>
+
+<div class="statement-a">
+  <div class="heading">Our Mission</div>
+  <blockquote>“Health and equity for all.” </blockquote>
+  <p>This is now a core part of KHS’s mission. Every policy, program, and service is viewed through an equity lens.</p>
+</div>
