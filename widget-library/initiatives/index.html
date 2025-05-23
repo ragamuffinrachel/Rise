@@ -1,4 +1,4 @@
-<!-- Health Equity Initiatives Widgets for Articulate Rise -->
+<!-- Health Equity Initiatives Widgets with Tooltips for Articulate Rise -->
 <!-- Import Google Fonts -->
 <link
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
@@ -12,6 +12,8 @@
     --text-color: #2b2b2b;
     --radius: 8px;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --tooltip-text: #fff;
   }
   .he-widget {
     display: grid;
@@ -28,6 +30,7 @@
     box-shadow: var(--shadow);
     padding: 1.25rem;
     transition: transform 0.3s;
+    position: relative;
   }
   .he-widget .card:hover {
     transform: translateY(-5px);
@@ -50,6 +53,36 @@
     font-size: 1.5rem;
     margin: 0.5rem 0;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    text-align: left;
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
   }
   .he-widget p {
     line-height: 1.5;
@@ -68,19 +101,34 @@
 <div class="he-widget">
   <div class="card">
     <div class="icon">1</div>
-    <h2>Equity in QI</h2>
+    <h2>
+      Equity in QI
+      <span class="tooltip">ⓘ
+        <span class="tooltiptext">QI systematically measures and improves healthcare by analyzing outcome disparities across demographics.</span>
+      </span>
+    </h2>
     <p>KHS’s Quality Improvement Program now systematically <strong>stratifies health outcomes by demographics</strong> to identify disparities—reviewing measures like cancer screening and diabetes control across groups and regions. Targeted interventions close identified gaps.</p>
     <p class="result">Result: Equity is built into success metrics, with dashboards spotlighting where to focus improvement.</p>
   </div>
   <div class="card">
     <div class="icon">2</div>
-    <h2>Health Equity Grants</h2>
+    <h2>
+      Health Equity Grants
+      <span class="tooltip">ⓘ
+        <span class="tooltiptext">A $20M grant program funding providers and strategic initiatives to expand care in underserved communities.</span>
+      </span>
+    </h2>
     <p>In Aug 2023, KHS Board approved a <strong>$20M Health Equity Grants</strong> program: <strong>$8M</strong> for provider recruitment and quality projects, plus <strong>$12M</strong> for strategic initiatives supporting community organizations in underserved areas.</p>
     <p class="result">Result: More clinics and programs in remote Kern communities, funding innovations—e.g., expanding diabetic care outreach for farmworkers.</p>
   </div>
   <div class="card">
     <div class="icon">3</div>
-    <h2>Doula & Maternal Health</h2>
+    <h2>
+      Doula & Maternal Health
+      <span class="tooltip">ⓘ
+        <span class="tooltiptext">Medi‑Cal covers doula services providing community-based prenatal and childbirth support.</span>
+      </span>
+    </h2>
     <p>Since Jan 1, 2023, Medi‑Cal <strong>doula services</strong> are a covered benefit. KHS integrates trained birth coaches into care teams and educates communities, boosting use among Black mothers and rural members.</p>
     <p class="result">Result: Increased prenatal support and real‑world outcomes—community sessions led to higher doula utilization.</p>
   </div>
@@ -90,13 +138,23 @@
 <div class="he-widget">
   <div class="card">
     <div class="icon">4</div>
-    <h2>Community Health Workers</h2>
+    <h2>
+      Community Health Workers
+      <span class="tooltip">ⓘ
+        <span class="tooltiptext">Community members trained to guide peers through health services, building trust and cultural competency.</span>
+      </span>
+    </h2>
     <p>KHS employs CHWs with <strong>lived experience</strong>, hiring from the communities they serve to bridge cultural and linguistic gaps. They provide outreach, education, coordination, and resource connections.</p>
     <p class="result">Result: Trusted, culturally competent support helps members navigate care and social needs, reducing barriers one person at a time.</p>
   </div>
   <div class="card">
     <div class="icon">5</div>
-    <h2>ECM & Supports</h2>
+    <h2>
+      ECM & Supports
+      <span class="tooltip">ⓘ
+        <span class="tooltiptext">Enhanced Care Management plus social services (housing, food, sobering) for whole-person health.</span>
+      </span>
+    </h2>
     <p>Under CalAIM, KHS expanded Enhanced Care Management and <strong>Community Supports</strong>, adding 31 ECM programs and offering 12 of 14 state-approved social services (housing, food assistance, sobering centers).</p>
     <p class="result">Result: Whole‑person care reduces ER visits and tackles social determinants—stable housing and food security improve member outcomes.</p>
   </div>
