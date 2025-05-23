@@ -1,0 +1,86 @@
+<!-- Widget 1: Purpose & Stats (Self‑Contained Snippet) -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Cormorant:wght@600&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  .he-widget-primary {
+    --radius: 8px;
+    --shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .primary-image {
+    flex: 1 1 200px;
+    min-height: 200px;
+    background: url('https://picsum.photos/400/300') center/cover no-repeat;
+  }
+  .primary-content {
+    flex: 2 1 300px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .primary-title {
+    font-family: 'Cormorant', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #3c3163;
+  }
+  .primary-text,
+  .primary-stat-label {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b2b2b;
+  }
+  .primary-text { line-height: 1.6; margin-bottom: 1rem; }
+  .primary-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .primary-stat {
+    flex: 1 1 120px;
+    background: #f5f7fa;
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+  }
+  .primary-stat-number {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    color: #4b168a;
+    margin-bottom: 0.25rem;
+  }
+  @media (max-width: 600px) {
+    .he-widget-primary { flex-direction: column; }
+    .primary-image { width: 100%; height: 180px; }
+  }
+</style>
+
+<div class="he-widget-primary">
+  <div class="primary-image" aria-label="Purpose graphic"></div>
+  <div class="primary-content">
+    <h2 class="primary-title">Purpose of the Health Equity Department</h2>
+    <p class="primary-text">
+      The purpose of this department is to ensure all Kern Family Health Care members (over 400,000 Medi‑Cal enrollees, about 90% of Kern’s Medi‑Cal population) can access high‑quality care, no matter their income, race/ethnicity, or where they live.
+    </p>
+    <div class="primary-stats">
+      <div class="primary-stat">
+        <div class="primary-stat-number">400,000+</div>
+        <div class="primary-stat-label">Medi‑Cal enrollees</div>
+      </div>
+      <div class="primary-stat">
+        <div class="primary-stat-number">90%</div>
+        <div class="primary-stat-label">of Medi‑Cal population</div>
+      </div>
+    </div>
+  </div>
+</div>
